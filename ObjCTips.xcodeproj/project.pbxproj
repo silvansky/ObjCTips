@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C551FFC418978D86005C3AA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C551FFC318978D86005C3AA1 /* Foundation.framework */; };
 		C551FFC718978D86005C3AA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FFC618978D86005C3AA1 /* main.m */; };
-		C551FFCB18978D86005C3AA1 /* ObjCTips.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C551FFCA18978D86005C3AA1 /* ObjCTips.1 */; };
+		C551FFD318978DA4005C3AA1 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FFD218978DA4005C3AA1 /* TestObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +19,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				C551FFCB18978D86005C3AA1 /* ObjCTips.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,7 +29,8 @@
 		C551FFC318978D86005C3AA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C551FFC618978D86005C3AA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C551FFC918978D86005C3AA1 /* ObjCTips-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCTips-Prefix.pch"; sourceTree = "<group>"; };
-		C551FFCA18978D86005C3AA1 /* ObjCTips.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObjCTips.1; sourceTree = "<group>"; };
+		C551FFD118978DA3005C3AA1 /* TestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
+		C551FFD218978DA4005C3AA1 /* TestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				C551FFC618978D86005C3AA1 /* main.m */,
-				C551FFCA18978D86005C3AA1 /* ObjCTips.1 */,
+				C551FFD118978DA3005C3AA1 /* TestObject.h */,
+				C551FFD218978DA4005C3AA1 /* TestObject.m */,
 				C551FFC818978D86005C3AA1 /* Supporting Files */,
 			);
 			path = ObjCTips;
@@ -139,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C551FFD318978DA4005C3AA1 /* TestObject.m in Sources */,
 				C551FFC718978D86005C3AA1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,18 +219,22 @@
 		C551FFCF18978D86005C3AA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjCTips/ObjCTips-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
 			name = Debug;
 		};
 		C551FFD018978D86005C3AA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ObjCTips/ObjCTips-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
 			};
 			name = Release;
 		};
