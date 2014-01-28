@@ -10,7 +10,7 @@ Demo project that illustrates some of ObjC rarely used features.
 5. Print current autorelease pool
 6. Synthesized ivars for `@property`
 7. Accessing public ivars with `->`
-8. instancetype keyword
+8. `instancetype` keyword
 9. Proxying other object with `forwardingTargetForSelector:` and `forwardInvocation:`
 10. Using `NSFastEnumeration` to make `for..in` loop possible for custom objects
 
