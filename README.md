@@ -16,4 +16,4 @@ Demo project that illustrates some of ObjC rarely used features.
 
 Project uses ARC and contains one custom class `TestObject` with all mentioned features in it. `main()` function show how this class can be used.
 
-This code is distributed under MIT License. See `LICENCE` file for more info.
+This code is distributed under MIT License. See `LICENSE` file for more info.
